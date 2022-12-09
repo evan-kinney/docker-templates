@@ -12,6 +12,6 @@
   <TemplateURL>https://raw.githubusercontent.com/evan-kinney/docker-templates/main/evan-kinney/remote.it.xml</TemplateURL>
   <Icon></Icon>
   <Overview></Overview>
-  <Config Name="Notifiarr API Key" Target="R3_REGISTRATION_CODE" Default="" Description="Container Variable: R3_REGISTRATION_CODE - registration key from remote.it" Type="Variable" Display="always" Required="true" Mask="false" />
+  <Config Name="Registration key" Target="R3_REGISTRATION_CODE" Default="" Description="Container Variable: R3_REGISTRATION_CODE - registration key from remote.it" Type="Variable" Display="always" Required="true" Mask="false" />
   <Config Name="appdata" Target="/etc/remoteit" Default="/mnt/user/appdata/remoteit/" Mode="rw" Description="Container Path: /etc/remoteit" Type="Path" Display="advanced" Required="true" Mask="false" />
 </Container>
