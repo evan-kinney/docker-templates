@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>remote.it</Name>
-  <Repository>evan-kinney/remote.it</Repository>
+  <Repository>remoteit/remoteit-agent</Repository>
   <Registry>https://hub.docker.com/r/remoteit/remoteit-agent/</Registry>
   <Shell>sh</Shell>
   <Network>bridge</Network>
