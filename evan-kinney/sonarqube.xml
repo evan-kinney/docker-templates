@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>sonarqube</Name>
+  <Repository>sonarqube</Repository>
+  <Registry>https://hub.docker.com/_/sonarqube/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support></Support>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>TODO: Desription</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>enterprise</Tag>
+    <TagDescription>TODO: Desription</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>developer</Tag>
+    <TagDescription>TODO: Desription</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>datacenter-search</Tag>
+    <TagDescription>TODO: Desription</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>datacenter-app</Tag>
+    <TagDescription>TODO: Desription</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>community</Tag>
+    <TagDescription>TODO: Desription</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>lts</Tag>
+    <TagDescription>TODO: Desription</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>lts-enterprise</Tag>
+    <TagDescription>TODO: Desription</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>lts-developer</Tag>
+    <TagDescription>TODO: Desription</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>lts-datacenter-search</Tag>
+    <TagDescription>TODO: Desription</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>lts-datacenter-app</Tag>
+    <TagDescription>TODO: Desription</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>lts-community</Tag>
+    <TagDescription>TODO: Desription</TagDescription>
+  </Branch>
+  <Project>https://www.sonarsource.com/products/sonarqube/</Project>
+  <Overview>TODO: Add overview</Overview>
+  <Category>Cloud: Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:9000]/index.html</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/evan-kinney/docker-templates/main/evan-kinney/sonarqube.xml</TemplateURL>
+  <Icon>https://d1q6f0aelx0por.cloudfront.net/product-logos/library-sonarqube-logo.png</Icon>
+  <ReadMe>https://docs.sonarsource.com/sonarqube/latest/setup-and-upgrade/install-the-server/</ReadMe>
+  <GitHub>https://github.com/SonarSource/docker-sonarqube</GitHub>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>TODO: Description</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9000</HostPort>
+        <ContainerPort>9000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/opt/sonarqube/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/opt/sonarqube/extensions</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sonarqube/logs</HostDir>
+      <ContainerDir>/opt/sonarqube/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Name>SONAR_JDBC_URL</Name>
+      <Value>jdbc:postgresql://localhost:5432/sonar</Value>
+    </Variable>
+    <Variable>
+      <Name>SONAR_JDBC_USERNAME</Name>
+      <Value>sonar</Value>
+    </Variable>
+    <Variable>
+      <Name>SONAR_JDBC_PASSWORD</Name>
+      <Value>sonar</Value>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Webui" Target="9000" Default="9000" Mode="tcp" Description="For access to the SonarQube Webui (No effect in host mode - reference only)" Type="Port" Display="advanced" Required="false" Mask="false">9000</Config>
+  <Config Name="Data" Target="/opt/sonarqube/data" Default="/mnt/user/appdata/sonarqube/data" Mode="rw" Description="TODO: Description" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/sonarqube/data</Config>
+  <Config Name="Extensions" Target="/opt/sonarqube/extensions" Default="/mnt/user/appdata/sonarqube/extensions" Mode="rw" Description="TODO: Description" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/sonarqube/extensions</Config>
+  <Config Name="Logs" Target="/opt/sonarqube/logs" Default="/mnt/user/appdata/sonarqube/logs" Mode="rw" Description="TODO: Description" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/sonarqube/logs</Config>
+  <Config Name="SONAR_JDBC_URL" Target="SONAR_JDBC_URL" Default="jdbc:postgresql://localhost:5432/sonar" Mode="" Description="TODO: Description (Remove to use H2 database)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SONAR_JDBC_USERNAME" Target="SONAR_JDBC_USERNAME" Default="sonar" Mode="" Description="TODO: Description (Remove to use H2 database)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SONAR_JDBC_UPASSWORD" Target="SONAR_JDBC_PASSWORD" Default="sonar" Mode="" Description="TODO: Description (Remove to use H2 database)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SONAR_ES_BOOTSTRAP_CHECKS_DISABLE" Target="SONAR_ES_BOOTSTRAP_CHECKS_DISABLE" Default="true" Mode="" Description="TODO: Description" Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+</Container>
